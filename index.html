@@ -3,51 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Saya</title>
+  <title>Fakhriy — Portfolio</title>
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
     }
 
     body {
-      background: #f5f5f5;
-      color: #222;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+      background: #0b0b0b;
+      color: #f5f5f7;
       min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
     }
 
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .hero {
+      margin-bottom: 32px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 600;
+      letter-spacing: -2px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #9a9a9f;
+      max-width: 600px;
+      line-height: 1.7;
     }
 
     .card {
-      background: white;
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #555;
-      margin-bottom: 20px;
-      line-height: 1.6;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 28px;
+      overflow: hidden;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
     }
 
     .pdf-viewer {
       width: 100%;
-      height: 80vh;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      overflow: hidden;
+      height: 78vh;
+      background: #111;
     }
 
     iframe {
@@ -56,50 +66,91 @@
       border: none;
     }
 
-    .download-btn {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 12px 18px;
-      background: #111;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      transition: 0.2s;
+    .actions {
+      padding: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
-    .download-btn:hover {
+    .meta {
+      color: #8e8e93;
+      font-size: 14px;
+    }
+
+    .btn {
+      text-decoration: none;
+      background: #f5f5f7;
+      color: #111;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
       opacity: 0.9;
     }
 
     footer {
+      margin-top: 26px;
       text-align: center;
-      margin-top: 24px;
-      color: #777;
-      font-size: 14px;
+      color: #666;
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .pdf-viewer {
+        height: 70vh;
+      }
+
+      .actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="card">
-      <h1>Portfolio Saya</h1>
+    <section class="hero">
+      <h1>Fakhriy</h1>
       <p>
-        Halo! Ini adalah portfolio saya dalam bentuk PDF.
-        Anda bisa melihat langsung file portfolio di bawah ini atau mengunduhnya.
+        Selected works, experience, and projects.
       </p>
+    </section>
 
+    <section class="card">
       <div class="pdf-viewer">
-        <!-- Ganti nama file di bawah dengan nama PDF kamu -->
-        <iframe src="Untitled design (1).pdf"></iframe>
+        <!-- Ganti portfolio.pdf dengan nama file PDF kamu -->
+        <iframe src="Unitled design (1).pdf"></iframe>
       </div>
 
-      <a href="portfolio.pdf" class="download-btn" download>
-        Download Portfolio PDF
-      </a>
-    </div>
+      <div class="actions">
+        <div class="meta">
+          Portfolio PDF • Updated 2026
+        </div>
+
+        <a href="portfolio.pdf" download class="btn">
+          Download PDF
+        </a>
+      </div>
+    </section>
 
     <footer>
-      © 2026 Portfolio Saya
+      © 2026 Fakhriy
     </footer>
   </div>
 </body>
